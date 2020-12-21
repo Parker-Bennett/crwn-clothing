@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+  
+    "tasks": [
+      {
+        "label": "new react folder and files",
+  
+        "command": "cd src/components && mkdir ${input:dirName} && cd ${input:dirName} && echo import React from 'react'; > ${input:dirName}.component.jsx && echo .${input:dirName} {} > ${input:dirName}.styles.scss",
+  
+        "type": "shell",
+        "problemMatcher": [],
+        "presentation": {
+          "echo": false,
+          "reveal": "silent",
+          "focus": false,
+          "panel": "shared",
+          "showReuseMessage": false,
+          "clear": true
+        },
+     }
+  ],  
+  
+  // ........................................................................................
+    
+    "inputs": [
+  
+      {
+        "type": "promptString",
+        "id": "dirName",
+        "description": "Complete my folder name",
+        "default": "Component Name"
+      }
+    ]
+  }
